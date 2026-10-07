@@ -11,8 +11,8 @@ class FadeColor(ImageFilter):
 
     def apply_filter(self, image: np.ndarray) -> np.ndarray:
         img = image.astype(np.float32)
-        img = self.alpha * img + (1 - self.alpha) * 255
-        img += self.brightness
+        img = self.alpha * img + (1 - self.alpha) * 255 #сниж контраста
+        img += self.brightness #сдвиг яркости
         #снижение насыщенности
         if img.ndim == 3: #усредняем по третьей оси(по каналам BGR)
             gray = img.mean(axis=2, keepdims=True)

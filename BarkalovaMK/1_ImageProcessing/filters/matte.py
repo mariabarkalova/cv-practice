@@ -5,7 +5,7 @@ from .base import ImageFilter
 class Matte(ImageFilter):
 #Эффект маски: овальная рамка, края белые
 
-    def __init__(self, border: int = 40, softness: float = 0.20):
+    def __init__(self, border: int = 40, softness: float = 0.60):
         self.border = border
         self.softness = softness #плавный переход
 

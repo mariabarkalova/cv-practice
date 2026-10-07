@@ -6,7 +6,7 @@ class ImageFilter(ABC):
 
     @staticmethod
     def get_filter(filter_type: str, **kwargs) -> "ImageFilter":
-        """Фабричный метод: возвращает экземпляр нужного фильтра."""
+#Фабричный метод: возвращает экземпляр нужного фильтра
         from .resize import Resize
         from .grayscale import RGB2GrayScale
         from .antique import Antique
